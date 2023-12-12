@@ -1,0 +1,75 @@
+@import "./variables.scss";
+
+.addForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $black;
+  color: $white;
+  z-index: 100;
+  margin: 0;
+
+  h3 {
+    margin: 0 0 20px;
+  }
+
+  span {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    label {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 10px;
+    }
+
+    .error {
+      border: 1px solid $red;
+
+      &:focus {
+        outline: none;
+        border-color: $orange;
+        background-color: $light-yellow;
+      }
+    }
+
+    p {
+      color: $red;
+      margin: 0;
+      text-align: start;
+      text-transform: capitalize;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 440px) {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+
+    .cancel {
+      background-color: $red;
+      margin-bottom: 0;
+    }
+
+    .confirm {
+      background-color: $green;
+      margin-bottom: 0;
+    }
+  }
+}

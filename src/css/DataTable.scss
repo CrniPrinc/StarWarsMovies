@@ -1,0 +1,35 @@
+@import "./variables.scss";
+
+.dataTable {
+  .dataGrid {
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+    background-color: $white;
+
+    .MuiDataGrid-toolbarContainer {
+      flex-direction: row-reverse;
+
+      @media only screen and (max-width: 550px) {
+        flex-direction: column;
+      }
+    }
+
+    .actions {
+      display: flex;
+      gap: 15px;
+
+      svg {
+        cursor: pointer;
+      }
+
+      .viewDetails {
+        color: $green;
+      }
+
+      .delete {
+        color: $red;
+      }
+    }
+  }
+}
